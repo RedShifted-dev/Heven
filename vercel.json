@@ -1,5 +1,12 @@
 {
     "routes": [
-      { "src": "/.", "dest": "/index.html" }
+      {
+        "src": "/auth",
+        "dest": "/auth.html"
+      },
+      {
+        "src": "/.*",
+        "dest": "/index.html"
+      }
     ]
-  }
+}
