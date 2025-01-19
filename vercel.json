@@ -1,7 +1,7 @@
 {
     "routes": [
       {
-        "src": "/auth",
+        "src": "/public/(.*)",
         "dest": "/auth.html"
       },
       {
