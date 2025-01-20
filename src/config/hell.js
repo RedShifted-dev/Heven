@@ -1,8 +1,8 @@
-require('dotenv').config();
+const API_URL = process.env.SURVER_URL;
 
 export async function validEmail(email) {
     try {
-        const response = await fetch(`${process.env.SURVER_URL}/api/validEmail`, {
+        const response = await fetch(`${API_URL}/api/validEmail`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email }),
