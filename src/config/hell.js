@@ -1,4 +1,4 @@
-const API_URL = process.env.BACKEND_URL;
+const API_URL = 'https://hell-pink.vercel.app';
 
 export async function validEmail(email) {
     try {
