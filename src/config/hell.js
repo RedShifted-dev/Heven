@@ -1,4 +1,4 @@
-const API_URL = 'https://hell-pink.vercel.app';
+const API_URL = 'https://hell-ashen.vercel.app';
 
 export async function validEmail(email) {
     try {
