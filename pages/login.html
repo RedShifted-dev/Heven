@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../src/styles/auth.css">
     <script type = "module" src="../src/services/submit.js" defer></script>
+    <script type="module" src="../src/config/regester.js"></script>
 </head>
 
 <body>
@@ -17,70 +18,15 @@
                 <source src="../resources/videos/authpage.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="wrapper activer">
-            <div class="form-box login">
-                <h2>Login</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
-                        <label>IISER-B Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <!-- <label><input type="checkbox">Remember me</label> -->
-                        <a href="#">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="login-register">
-                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                    </div>
-                </form>
-            </div>
-
-            <div class="form-box register">
-                <h2>Sign Up</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input id="user" type="text" required>
-                        <label>Party Name</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input id="email" type="email" required>
-                        <label>IISER-B Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input id="password" type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <!-- <label><input type="checkbox">I agree to the terms and conditions</label> -->
-                    </div>
-                    <button type="submit" class="btn" id="submit">Register</button>
-                    <div class="login-register">
-                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
-                    </div>
-                </form>
-            </div>
-            <div class="form-box otp">
-                <h2>OTP</h2>
-                    <div class="input-otp">
-                        <input type="number" id="otp" required><br><br>
-                    </div>
-                    <button type="button" id="varify-otp">Verify OTP</button>
+        <div class="wrapper">
+            <div class="login">
+                <button class="btn" id="btn">
+                    <img src="../resources/static/download.jpeg" class="jocker-logo">
+                    <div class="text"><b>Join the Party</b></div>
+                  </button>
             </div>
         </div>
     </div>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script src="../src/logic/auth.js"></script>
 </body>
 
 </html>

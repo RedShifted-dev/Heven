@@ -1,19 +1,28 @@
-import { validEmail } from "../config/hell.js";
+import { GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+import { provider } from "../config/regester.js";
+import { auth } from "../config/regester.js";
 
-
-
-//submit button
-const submit = document.getElementById('submit');
-
-submit.addEventListener("click", function (event) {
-    event.preventDefault();
-    // get input
-    const userName = document.getElementById('user').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    // Check if fields are empty
-    if (userName && email && password) {
-        validEmail(email);
-    }
+//login button
+document.getElementById("btn").addEventListener("click", () => {
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const user = result.user;
+            console.log(user.email);
+            if (user) {
+                console.log("half done");
+                if (!user.email.endsWith("23@iiserb.ac.in")) {
+                    alert("Only for IISERB 24 Batch!");
+                    user.delete().then(() => {
+                    }).catch((error) => {
+                        console.error("Error deleting user:", error);
+                    });
+                    firebase.auth().signOut();
+                }
+            }
+            window.location.href = "./main.html";
+        }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        });
 });

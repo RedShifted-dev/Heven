@@ -6,21 +6,6 @@
     box-sizing: border-box;
 }
 
-/* Full Screen */
-
-.full-screen
-{
-    touch-action: none;
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
 /* Video Div*/
 
 .video-container {
@@ -44,268 +29,21 @@
     bottom: 0;
 }
 
-/* header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-} */
-
-/* body{
-    background: url(bg.jpg) no-repeat;
-    display:flex; 
-    justify-content: center;
-    align-items: center;
-    min-width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-} */
-
-/* .logo{
-    font-size: 2em;
-    color: hsl(0, 0%, 100%);
-    user-select: none;
-}
-
-.navigation a{
-    position: relative;
-    font-size: 1.1em;
-    color:hsl(0, 0%, 100%);
-    text-decoration: none;
-    margin-left: 40px;
-    font-weight: 500;
-}
-
-.navigation a::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-
-.navigation a:hover::after{
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-.navigation .btnLogin-popup {
-    width: 130px;
-    height: 50px;
-    background: transparent;
-    border: 2px solid hsl(0, 0%, 100%);
-    outline: none;
-    border-radius: 6px;
-    cursor:pointer;
-    font-size: 1.1em;
-    color: hsl(0, 0%, 100%);
-    font-weight: 500;
-    margin-left: 40px;
-
-}
-
-.navigation .btnLogin-popup:hover{
-    background: hsl(0, 0%, 100%);
-    color: hsl(0, 0%, 0%);
-} */
-/*....................................................*/
 .wrapper{
     position: absolute;
-    width: 350px;
-    height: 520px;
+    width: 70vw;
+    height: 45px;
     background: transparent;
-    /* border: 10px solid hsla(0, 0%, 100%, 0.5); */
-    /* border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px hsla(0, 0%, 0%, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transform: scale(0.75);
-    transition: transform .5s ease, height .2s ease; */
 
-    /* align-items: center; */
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
 }
-/*....................................................*/
-/* .wrapper.active-popup {
-    transform: scale(1);
-} */
-/*....................................................*/
-/* .wrapper.active{
-    height: 520px;
-} */
 
-.wrapper .form-box{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    top: 0;
-    left: 0;
-}
-
-.wrapper.activel .form-box.login{
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-
-.wrapper .form-box.login{
-    transition: transform .18s ease;
-    transform: translateX(-400px);
-}
-
-.wrapper .form-box.register {
-    transition: transform .18s ease;   
-    transform: translateX(400px); 
-}
-
-.wrapper.activer .form-box.register{
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-
-.wrapper .form-box.otp{
-    transition: transform .18s ease;
-    transform: translateY(1000px);
-}
-
-.wrapper.otp .form-box.otp{
-    transition: transform .18s ease;
-    transform: translateY(0);
-}
-
-/* .wrapper.otp .form-box.register{
-}
-
-.wrapper.otp .form-box.login{
-} */
-
-/* .wrapper.active .form-box.otp{
-    display: none;
-}
-
-.wrapper.activeotp .form-box.otp{
-    display: block;
-} */
-/*....................................................*/
-/* .wrapper .icon-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: hsl(206, 44%, 15%);
-    font-size: 2em;
-    color: hsl(0, 0%, 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 1;
-} */
-/*....................................................*/
-.form-box h2 {
-    font-size: 2em;
-    color: hsl(304, 87%, 53%);
-    text-align: center;
-}
-
-.input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid hsl(0, 0%, 98%);
-    margin: 30px 0px;
-}
-
-.input-box label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-weight: 500;
-    font-size: 1em;
-    color: hsl(0, 0%, 100%);
-    pointer-events: none;
-    transition: .25s;
-}
-
-/* .input-box input:focus~label, 
-.input-box input:not(:empty)~label {
-    top: -5px;
-}
-*/
-.input-box label {
-    top: 0;
-}
-
-
-
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color:hsl(0, 0%, 100%);
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-}
-
-.input-box .icon {
-    position: absolute;
-    right: 8px;
-    line-height: 57px;
-    font-size: 1.2em;
-    color:hsl(0, 0%, 100%); 
-}
-
-.remember-forgot {
-    font-size: .9em;
-    color: hsl(0, 0%, 100%);
-    font-weight: 500;
-    margin: -15px 0 15px;
-    display: flex;
-    justify-content: space-between;
-
-} 
-
-.remember-forgot label input {
-    accent-color: hsl(0, 0%, 100%);
-    margin-right: 3px;
-}
-
-.remember-forgot a {
-    color:hsl(0, 0%, 100%);
-    text-decoration: none;
-}
-
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
-
-.btn {
+/* .btn {
     width: 100%;
     height: 45px;
+    top: 0px;
     background: hsl(206, 44%, 15%);
     border: none;
     border-radius: 6px;
@@ -314,22 +52,40 @@
     font-size: 1em;
     color: hsl(0, 0%, 100%);
     font-weight: 500;
+} */
+
+.btn {
+    width: 100%;
+    height: 45px;
+    top: 0px;
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 24px; /* Rounded corners */
+    padding: 8px 16px; /* Adjust padding as needed */
+    font-size: 16px; /* Text size */
+    font-weight: 500; /*  Medium font weight*/
+    color: #222; /* Dark gray text */
+    cursor: pointer; /* Show hand pointer on hover */
+    transition: all 0.2s ease-in-out; /* Smooth hover animation */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
-.login-register {
-    font-size: .9em;
-    color: hsl(0, 0%, 100%);
-    text-align: center;
-    font-weight: 500;
-    margin: 25px 0px 10px;
+.btn:hover {
+    background-color: #fbffce; /* Light gray background on hover */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Stronger shadow on hover */
 }
 
-.login-register p a {
-    font-weight: 600;
-    color: hsl(0, 0%, 100%);
-    text-decoration: none;
+.btn .jocker-logo {
+    width: 20px; /* Adjust image width as needed */
+    height: 20px; /* Adjust image height as needed */
+    margin-right: 8px; /* Space between logo and text */
 }
 
-.login-register p a:hover {
-    text-decoration: underline;
+.btn .text {
+    width: 100%; /* Take up all available space */
+    align-self: center; /* Center text vertically */;
+    padding-right: 28px;
 }
+
